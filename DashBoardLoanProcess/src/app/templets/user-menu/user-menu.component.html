@@ -1,0 +1,10 @@
+<div class="menu">
+
+  <img [src]="'data:image/jpeg;base64,'+ user.userDocs.photo" width="100" height="100"/> <h2>{{user.designation}}</h2>
+   <div *ngFor="let option of userOptions[0][user.designation]">
+
+      <button class="btn btn-danger ms-5 mt-3" (click)="navigateTo(option.path)">{{option.lable}}</button>
+
+   </div>
+
+</div>

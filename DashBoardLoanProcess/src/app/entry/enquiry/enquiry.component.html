@@ -1,0 +1,133 @@
+<div class="container">
+
+  <div class="row" style="margin-left: 20%; margin-top: 10%;">
+
+    <div class="col-lg-8 col-lg-offset-2">
+
+
+      <form id="contact-form"  action="" [formGroup]="enquiryform" (ngSubmit)="onEnquirySubmit()">
+
+        <div class="messages"></div>
+
+        <div class="controls" style="color: azure;">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="form_name">FirstName</label>
+                <input id="form_name" type="text"  class="form-control" required="required"
+                  data-error="Firstname is required." formControlName="firstName">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="form_lastname">MiddleName</label>
+                <input id="form_lastname" type="text"  class="form-control" required="required"
+                  data-error="Lastname is required." formControlName="middleName">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="form_lastname">LastName</label>
+                <input id="form_lastname" type="text"  class="form-control" required="required"
+                  data-error="Lastname is required." formControlName="lastName">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 5%;">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="form_name">Date Of Birth</label>
+                <input id="form_name" type="date"  class="form-control" required="required"
+                  data-error="Firstname is required." formControlName="dateOfBirth">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="form_lastname">Age</label>
+                <input id="form_lastname" type="number"  class="form-control" required="required"
+                  data-error="Lastname is required." formControlName="age">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="form_lastname">Gender</label>
+                <!-- Default radio -->
+                <div class="form-check">
+                  <input class="form-check-input" type="radio"  value="male" id="flexRadioDefault1" formControlName="gender" />
+                  <label class="form-check-label" for="flexRadioDefault1">Male</label>
+                </div>
+
+                <!-- Default checked radio -->
+                <div class="form-check">
+                  <input class="form-check-input" type="radio"  value="female" id="flexRadioDefault2" formControlName="gender" />
+                  <label class="form-check-label" for="flexRadioDefault2">Female</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 5%;">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="form_email">Email</label>
+                <input id="form_email" type="email"  class="form-control"
+                   required="required" data-error="Valid email is required." formControlName="emailId">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="form_phone">Phone</label>
+                <input id="form_phone" type="tel"  class="form-control" formControlName="mobileNo">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 5%;">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="form_email">Pan Number</label>
+                <input id="form_email" type="email"  class="form-control"
+                   required="required" data-error="Valid email is required." formControlName="panNo">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="form_phone">Cibil Score</label>
+                <input id="form_phone" type="number"  class="form-control" formControlName="cibilScore">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="form_phone">Address(City Name)</label>
+                <input id="form_phone" type="tel"  class="form-control" formControlName="city">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 5%;">
+            
+            <div class="col-md-12" style="margin-left: 37%;">
+              <input type="submit" class="btn btn-success" value="Send message">
+            </div>
+          </div>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js'></script>
