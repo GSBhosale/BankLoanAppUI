@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { DashheaderComponent } from './templets/dashheader/dashheader.component';
 import { UserMenuComponent } from './templets/user-menu/user-menu.component';
+import { FooterComponent } from './templets/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { UserMenuComponent } from './templets/user-menu/user-menu.component';
     ContactComponent,
     LocationComponent,
     DashheaderComponent,
-    UserMenuComponent
+    UserMenuComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
