@@ -1,7 +1,7 @@
 <div class="menu">
 
-  <img [src]="'data:image/jpeg;base64,'+ user.userDocs.photo" width="100" height="100"/> <h2>{{user.designation}}</h2>
-   <div *ngFor="let option of userOptions[0][user.designation]">
+  <img [src]="'data:image/jpeg;base64,'+ user.userDocs.photo" class="profile" style="margin-left: 8%; margin-top: 5%;" width="150" height="150"/><h5 style="margin-left: 17%;">{{user.username}}</h5> <h3>{{user.designation}}</h3>
+   <div *ngFor="let option of userOptions[0][user.designation]" style="margin-left: -4%;">
 
       <button class="btn btn-danger ms-5 mt-3" (click)="navigateTo(option.path)">{{option.lable}}</button>
 

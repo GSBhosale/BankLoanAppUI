@@ -18,4 +18,9 @@ export class CommonService {
   {
     return this.http.get("http://localhost:9090/admin/authenticateUser/"+username+"/"+password);
   }
+
+  getAllEnquiries()
+  {
+    return this.http.get("http://localhost:9090/enquiry/viewAllEnquiry");
+  }
 }

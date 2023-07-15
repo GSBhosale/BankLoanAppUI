@@ -21,10 +21,10 @@ const routes: Routes = [
 {
   path:'dash',component:DashBoardComponent,children:[
     {
-      path:'manager' ,loadChildren:()=>import('src/app/modules/re/re.module').then(m=>m.ReModule)
+      path:'RelationshipExecutive' ,loadChildren:()=>import('src/app/modules/re/re.module').then(m=>m.ReModule)
     },
     {
-      path:'Operational Executive' , loadChildren:()=>import('src/app/modules/oe/oe.module').then(m=>m.OeModule)
+      path:'OperationalExecutive' , loadChildren:()=>import('src/app/modules/oe/oe.module').then(m=>m.OeModule)
     },
     {
       path:'Credit Manager' ,loadChildren:()=>import('src/app/modules/cm/cm.module').then(m=>m.CmModule)

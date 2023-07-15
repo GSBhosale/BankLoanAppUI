@@ -7,6 +7,8 @@ import { GetCibilComponent } from './get-cibil/get-cibil.component';
 import { ApplyLoanComponent } from './apply-loan/apply-loan.component';
 import { SuccessEmailComponent } from './success-email/success-email.component';
 import { RejectEmailComponent } from './reject-email/reject-email.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -19,7 +21,7 @@ import { RejectEmailComponent } from './reject-email/reject-email.component';
   ],
   imports: [
     CommonModule,
-    ReRoutingModule
+    ReRoutingModule,RouterModule
   ]
 })
 export class ReModule { }
