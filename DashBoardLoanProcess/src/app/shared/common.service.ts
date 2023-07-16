@@ -23,4 +23,9 @@ export class CommonService {
   {
     return this.http.get("http://localhost:9090/enquiry/viewAllEnquiry");
   }
+
+  getAllEnquiryToOE()
+  {
+    return this.http.get("http://localhost:9090/enquiry/viewAllEnquiryToOE");
+  }
 }

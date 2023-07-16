@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonService } from 'src/app/shared/common.service';
 
@@ -7,14 +7,17 @@ import { CommonService } from 'src/app/shared/common.service';
   templateUrl: './view-enquiry.component.html',
   styleUrls: ['./view-enquiry.component.css']
 })
-export class ViewEnquiryComponent {
+export class ViewEnquiryComponent implements OnInit{
 
   constructor(private cs:CommonService,private router:Router){}
-enquiry:any;
-  getAllEnquiries()
-  {
+  enquiry:any;
+
+  ngOnInit(): void {
     this.cs.getAllEnquiries().subscribe((e)=>{
-this.enquiry=e;
-    })
+      this.enquiry=e;
+          })
   }
+
+
+
 }

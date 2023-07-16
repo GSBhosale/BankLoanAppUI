@@ -1,0 +1,15 @@
+.CREATED{
+    color: blueviolet;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.CIBIl_REQUIRED{
+    color: cadetblue;
+}
+.CIBIL_OK{
+    color:green;
+}
+.CIBIL_REJECT
+{
+    color:red;
+}

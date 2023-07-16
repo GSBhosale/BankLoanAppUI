@@ -21,7 +21,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    ReRoutingModule,RouterModule
+    ReRoutingModule
   ]
 })
 export class ReModule { }
