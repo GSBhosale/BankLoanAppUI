@@ -1,3 +1,20 @@
 .profile{
     border-radius: 60px;
 }
+.usermenu{
+ background-color:lightgrey;
+ padding-bottom: 90%;
+}
+h4{
+    color: chocolate;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; 
+}
+h3{
+    color: crimson;
+}
+.fa{
+    color:darkred;
+    font-size: x-large;
+    margin-top: 3%;
+}

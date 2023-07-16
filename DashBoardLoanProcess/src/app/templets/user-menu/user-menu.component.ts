@@ -22,10 +22,10 @@ export class UserMenuComponent implements OnInit {
      this.user=JSON.parse(userType);
     }
 
-    // navigateTo(path:string)
-    // {
-    //     this.router.navigateByUrl('/dash/'+this.userType+'/'+path);
-    // }
+    navigateTo(path:string)
+    {
+        this.router.navigateByUrl('/dash/'+this.user.designation+'/'+path);
+    }
 
    
   

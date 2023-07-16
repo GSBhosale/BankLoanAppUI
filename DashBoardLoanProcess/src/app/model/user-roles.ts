@@ -12,7 +12,7 @@ export class UserRoles {
 
             OperationalExecutive:[
                 {path:'check_cibil', lable:'Check Cibile Score'},
-                {path:'verify_doc', lable:'Document Verifications'}
+                {path:'verify_doc', lable:'Document Verification'}
             ],
             cm:[
                 {path:'saction_letter' , lable:'Saction Letter'}
