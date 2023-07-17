@@ -7,6 +7,7 @@ import { LocationComponent } from './templets/location/location.component';
 import { EnquiryComponent } from './entry/enquiry/enquiry.component';
 import { LoginComponent } from './entry/login/login.component';
 import { DashBoardComponent } from './entry/dash-board/dash-board.component';
+import { EMICalculatorComponent } from './templets/emicalculator/emicalculator.component';
 
 const routes: Routes = [
   {path:'' ,component:HomeComponent,
@@ -15,7 +16,8 @@ const routes: Routes = [
     {path:'contact' , component:ContactComponent},
     {path:'location' , component:LocationComponent},
     {path:'enquiry' , component:EnquiryComponent},
-    {path:'login' , component:LoginComponent}
+    {path:'login' , component:LoginComponent},
+    {path:'emi' , component:EMICalculatorComponent}
   ]
 },
 {

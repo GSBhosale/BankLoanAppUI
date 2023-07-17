@@ -12,7 +12,6 @@
         <th scope="col">Pan No</th>
         <th scope="col">Email Id</th>
         <th scope="col">City</th>
-        <th scope="col">Cibil Score</th>
         <th scope="col">Status</th>
         <th scope="col">Action</th>
 
@@ -31,9 +30,9 @@
         <td>{{e.panNo}}</td>
         <td>{{e.emailId}}</td>
         <td>{{e.city}}</td>
-        <td><input type="number" [(ngModel)]="cibilscore"/></td>
+        
         <td class="{{e.enquiryStatus}}">{{e.enquiryStatus}}</td>
-        <td><button type="button" class="btn btn-outline-info" (click)="oncheckingCIBIL()">check cibil</button>
+        <td><button type="button" class="btn btn-outline-info" (click)="oncheckingCIBIL(e.enquiryId)">check cibil</button>
         </td>
       </tr>
     </tbody>

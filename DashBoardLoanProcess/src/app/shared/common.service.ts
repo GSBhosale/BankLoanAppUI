@@ -34,4 +34,9 @@ export class CommonService {
     alert(eid)
     return this.http.get("http://localhost:9090/enquiry/forwardToOE/"+eid);
   }
+
+  oncheckingCIBIL(eid:any)
+  {
+    return this.http.get("http://localhost:9090/enquiry/checkCIBIL/"+eid);
+  }
 }

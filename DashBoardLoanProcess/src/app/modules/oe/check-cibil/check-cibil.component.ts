@@ -20,8 +20,9 @@ export class CheckCibilComponent implements OnInit{
     })
   }
 
-  oncheckingCIBIL()
+  oncheckingCIBIL(eid:any)
   {
-    alert(this.cibilscore)
+    this.cs.oncheckingCIBIL(eid).subscribe();
+    window.location.reload();
   }
 }

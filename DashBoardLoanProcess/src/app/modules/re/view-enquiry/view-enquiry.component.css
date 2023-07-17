@@ -5,11 +5,17 @@
 }
 .CIBIl_REQUIRED{
     color: cadetblue;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .CIBIL_OK{
     color:green;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .CIBIL_REJECT
 {
     color:red;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

@@ -1,0 +1,38 @@
+<div class="container">
+
+    <div class="row" style="margin-left: 20%; margin-top: 10%;">
+
+        <div class="col-lg-8 col-lg-offset-2">
+
+            <div class="controls" style="color: azure;">
+
+                <h1>Using template reference</h1>
+                <p>
+                    <input type="range" min="1" max="100" step="1" (input)="rangeInput.value = +$event.target.value"
+                        #range>
+                    <input type="number" min="1" max="36" (input)="range.value = +$event.target.value" #rangeInput>
+                </p>
+
+                <h1>Using functions</h1>
+                <p>
+                    <input type="range" min="1" max="100" step="1"
+                        (input)="changeRange($event.target.value,rangeInput1)" #range1>
+                    <input type="number" min="1" max="36" (input)="changeRange($event.target.value, range1)"
+                        #rangeInput1>
+                </p>
+
+                <h1>Using a common variable</h1>
+                <p>
+                    <input type="range" min="1" max="100" step="1" (input)="rangeVar = $event.target.value"
+                        [value]="rangeVar">
+                    <input type="number" min="1" max="36" (input)="rangeVar = $event.target.value" [value]="rangeVar">
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js'></script>

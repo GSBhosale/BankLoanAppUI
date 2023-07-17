@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashheaderComponent } from './templets/dashheader/dashheader.component';
 import { UserMenuComponent } from './templets/user-menu/user-menu.component';
 import { FooterComponent } from './templets/footer/footer.component';
+import { EMICalculatorComponent } from './templets/emicalculator/emicalculator.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { FooterComponent } from './templets/footer/footer.component';
     LocationComponent,
     DashheaderComponent,
     UserMenuComponent,
-    FooterComponent
+    FooterComponent,
+    EMICalculatorComponent
   ],
   imports: [
     BrowserModule,
