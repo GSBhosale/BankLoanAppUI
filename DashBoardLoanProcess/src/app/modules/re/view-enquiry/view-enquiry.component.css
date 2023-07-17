@@ -16,6 +16,20 @@
 .CIBIL_REJECT
 {
     color:red;
+
     font-size: larger;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+
+
+th{
+    
+    background-color: cornflowerblue;
+}
+
+.thead {
+    top: 0;
+    position: sticky;
+    background: white;
+ }

@@ -31,9 +31,13 @@ import { EMICalculatorComponent } from './templets/emicalculator/emicalculator.c
     LocationComponent,
     DashheaderComponent,
     UserMenuComponent,
+
     FooterComponent,
     EMICalculatorComponent
   ],
+
+  
+
   imports: [
     BrowserModule,
     AppRoutingModule,ReactiveFormsModule,RouterModule,HttpClientModule

@@ -18,6 +18,8 @@ const routes: Routes = [
     {path:'enquiry' , component:EnquiryComponent},
     {path:'login' , component:LoginComponent},
     {path:'emi' , component:EMICalculatorComponent}
+
+  
   ]
 },
 {

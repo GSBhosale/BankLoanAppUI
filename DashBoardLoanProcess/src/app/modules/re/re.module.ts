@@ -9,6 +9,7 @@ import { SuccessEmailComponent } from './success-email/success-email.component';
 import { RejectEmailComponent } from './reject-email/reject-email.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    ReRoutingModule
+    ReRoutingModule,ReactiveFormsModule
   ]
 })
 export class ReModule { }

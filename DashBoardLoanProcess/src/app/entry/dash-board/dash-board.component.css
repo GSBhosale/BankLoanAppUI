@@ -2,3 +2,7 @@
     background-color: black;
     color: white;
 }
+.view{
+    max-height: 570px;
+    overflow-y: scroll;
+}

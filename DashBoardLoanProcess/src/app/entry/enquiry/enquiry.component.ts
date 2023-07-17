@@ -34,7 +34,7 @@ export class EnquiryComponent implements OnInit{
 
   onEnquirySubmit()
   {
-    alert("submit")
+   // alert("submit")
     this.cs.makeEnquiry(this.enquiryform.value).subscribe();
     console.log(this.enquiryform.value)
   }
