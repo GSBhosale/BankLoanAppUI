@@ -13,3 +13,14 @@
 {
     color:red;
 }
+
+th{
+    
+    background-color: cornflowerblue;
+}
+
+.thead {
+    top: 0;
+    position: sticky;
+    background: white;
+ }

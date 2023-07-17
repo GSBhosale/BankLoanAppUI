@@ -1,3 +1,9 @@
 .home{
     background-color: black;
 }
+.containt
+{
+    max-height: 570px;
+    overflow-y: scroll;
+
+}
