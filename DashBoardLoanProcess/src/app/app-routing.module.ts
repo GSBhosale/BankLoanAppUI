@@ -15,7 +15,7 @@ const routes: Routes = [
     {path:'contact' , component:ContactComponent},
     {path:'location' , component:LocationComponent},
     {path:'enquiry' , component:EnquiryComponent},
-    {path:'login' , component:LoginComponent}
+    {path:'login' , component:LoginComponent}  
   ]
 },
 {

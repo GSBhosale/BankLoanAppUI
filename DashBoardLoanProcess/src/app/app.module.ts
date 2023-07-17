@@ -31,7 +31,7 @@ import { FooterComponent } from './templets/footer/footer.component';
     DashheaderComponent,
     UserMenuComponent,
     FooterComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,ReactiveFormsModule,RouterModule,HttpClientModule
