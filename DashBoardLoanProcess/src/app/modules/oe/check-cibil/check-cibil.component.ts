@@ -10,6 +10,7 @@ export class CheckCibilComponent implements OnInit{
   
   constructor(private cs:CommonService){}
 
+  cibilscore:any
   enquiry:any;
 
   ngOnInit(): void {
@@ -19,4 +20,8 @@ export class CheckCibilComponent implements OnInit{
     })
   }
 
+  oncheckingCIBIL()
+  {
+    alert(this.cibilscore)
+  }
 }

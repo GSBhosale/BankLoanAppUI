@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CommonService {
+  
 
   constructor(private http:HttpClient) { }
 
@@ -27,5 +28,10 @@ export class CommonService {
   getAllEnquiryToOE()
   {
     return this.http.get("http://localhost:9090/enquiry/viewAllEnquiryToOE");
+  }
+
+  onForward(eid:any) {
+    alert(eid)
+    return this.http.get("http://localhost:9090/enquiry/forwardToOE/"+eid);
   }
 }

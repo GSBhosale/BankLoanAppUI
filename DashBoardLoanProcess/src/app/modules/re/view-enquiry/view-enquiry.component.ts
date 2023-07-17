@@ -18,6 +18,10 @@ export class ViewEnquiryComponent implements OnInit{
           })
   }
 
+  onForward(eid:any)
+  {
+    this.cs.onForward(eid).subscribe();
+  }  
 
 
 }
