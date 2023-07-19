@@ -36,14 +36,14 @@
         <td>
             <div class="row mt-0 p-0">
                 <div class="col mt-0 p-0" *ngIf="e.cibilScore>=750">
-                    <i class="fa fa-check fa-2x " style="color: green;" aria-hidden="true"></i>
+                    <i class="fa fa-check fa-2x " style="color: green;" aria-hidden="true" (click)="onSuccess(e.enquiryId)"></i>
                     </div>
                 <div class="col mt-0 p-0" *ngIf=" e.cibilScore < 750">
-                    <i class="fa fa-times fa-2x" style="color: red;" aria-hidden="true"></i>
+                    <i class="fa fa-times fa-2x" style="color: red;" aria-hidden="true" (click)="onReject(e.enquiryId)"></i>
                 </div>
             </div>
             <div class="row mt-0 p-0" *ngIf="x==5">
-            <button type="button" class="btn btn-outline-warning" >APPLY</button>
+            <button type="button" class="btn btn-warning" (click)="onApply()" >APPLY</button>
         </div>
         </td>
       </tr>

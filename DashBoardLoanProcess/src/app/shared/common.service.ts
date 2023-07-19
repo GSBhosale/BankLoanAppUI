@@ -65,4 +65,13 @@ export class CommonService {
   {
     return this.http.delete("http://localhost:9090/admin/deleteUser/"+uid);
   }
+
+  successMail(eid:any)
+  {
+    return this.http.get("http://localhost:9090/enquiry/sendSuccessMail/"+eid)
+  }
+  rejectMail(eid:any)
+  {
+    return this.http.get("http://localhost:9090/enquiry/sendRejectMail/"+eid)
+  }
 }
