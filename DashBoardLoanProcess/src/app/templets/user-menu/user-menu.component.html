@@ -1,6 +1,6 @@
 <div class="usermenu">
 
-  <img [src]="'data:image/jpeg;base64,'+ user.userDocs.photo" class="profile" style="margin-left: 20%; margin-top: 5%;" width="150" height="150"/><hr><h3 style="margin-left: 30%;">{{user.firstName}}</h3><hr> <h4 >{{user.designation}}</h4>
+  <img [src]="'data:image/jpeg;base64,'+ user.userDocs.photo" class="profile" style="margin-left: 20%; margin-top: 5%;" width="150" height="150"/><hr><h3 style="margin-left: 20%;">{{user.firstName}}&nbsp;&nbsp;{{user.lastName}}</h3><hr> <h4 >{{user.designation}}</h4>
   <hr> 
   <div *ngFor="let option of userOptions[0][user.designation]"  style="margin-left: -4%;">
 

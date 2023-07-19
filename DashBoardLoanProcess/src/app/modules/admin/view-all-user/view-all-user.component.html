@@ -1,0 +1,43 @@
+<table class="table">
+    <thead class="thead">
+        <tr>
+            <th scope="col">User Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Mobile No</th>
+            <th scope="col">Email Id</th>
+            <th scope="col">Designation</th>
+            <th scope="col">salary</th>
+            <th scope="col">photo</th>
+            <th scope="col">signature</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of user">
+            <td>{{u.userId}}</td>
+            <td>{{u.firstName}}</td>
+            <td>{{u.lastName}}</td>
+            <td>{{u.mobileNumber}}</td>
+            <td>{{u.emailId}}</td>
+            <td>{{u.designation}}</td>
+            <td>{{u.salary}}</td>
+            <td><img [src]="'data:image/jpeg;base64,'+ u.userDocs.photo" class="profile"
+                     width="100" height="100" /></td>
+            <td><img [src]="'data:image/jpeg;base64,'+ u.userDocs.signature" class="profile"
+                    width="100" height="100" /></td>
+
+            <td>
+                <div class="row mt-0 p-0">
+                    <div class="col mt-0 p-0">
+                        <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true" (click)="onDelete(u.userId)" style="color: green;"></i>
+                    </div>
+                    <div class="col mt-0 p-0">
+                        <i class="fa fa-trash-o fa-2x" aria-hidden="true" style="color: red;"></i>
+                    </div>
+                </div>
+                
+            </td>
+        </tr>
+    </tbody>
+</table>

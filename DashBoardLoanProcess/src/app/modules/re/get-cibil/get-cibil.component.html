@@ -12,6 +12,7 @@
         <th scope="col">Pan No</th>
         <th scope="col">Email Id</th>
         <th scope="col">City</th>
+        <th scope="col">cibil score</th>
         <th scope="col">Status</th>
         <th scope="col">Action</th>
 
@@ -30,9 +31,20 @@
         <td>{{e.panNo}}</td>
         <td>{{e.emailId}}</td>
         <td>{{e.city}}</td>
-        
+        <td>{{e.cibilScore}}</td>
         <td class="{{e.enquiryStatus}}">{{e.enquiryStatus}}</td>
-        <td><button type="button" class="btn btn-outline-info" (click)="oncheckingCIBIL(e.enquiryId)">check cibil</button>
+        <td>
+            <div class="row mt-0 p-0">
+                <div class="col mt-0 p-0" *ngIf="e.cibilScore>=750">
+                    <i class="fa fa-check fa-2x " style="color: green;" aria-hidden="true"></i>
+                    </div>
+                <div class="col mt-0 p-0" *ngIf=" e.cibilScore < 750">
+                    <i class="fa fa-times fa-2x" style="color: red;" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="row mt-0 p-0" *ngIf="x==5">
+            <button type="button" class="btn btn-outline-warning" >APPLY</button>
+        </div>
         </td>
       </tr>
     </tbody>

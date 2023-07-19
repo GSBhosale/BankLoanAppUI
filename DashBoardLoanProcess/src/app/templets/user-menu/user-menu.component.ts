@@ -20,10 +20,12 @@ export class UserMenuComponent implements OnInit {
     
      let userType=  sessionStorage.getItem('authUser');
      this.user=JSON.parse(userType);
+     
     }
 
     navigateTo(path:string)
     {
+      alert(path)
         this.router.navigateByUrl('/dash/'+this.user.designation+'/'+path);
     }
 

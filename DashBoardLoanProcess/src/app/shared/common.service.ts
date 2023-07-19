@@ -45,4 +45,24 @@ export class CommonService {
     return this.http.post("http://localhost:9090/customer/createCustomer",apply);
 
   }
+  getCIBIL()
+  {
+    return this.http.get("http://localhost:9090/enquiry/getCIBIL");
+  }
+
+  createUser(data:any)
+  {
+    alert("service")
+    return this.http.post("http://localhost:9090/admin/createUser",data);
+  }
+
+  getAllUsers()
+  {
+    return this.http.get("http://localhost:9090/admin/getAllUsers")
+  }
+
+  deleteUser(uid:any)
+  {
+    return this.http.delete("http://localhost:9090/admin/deleteUser/"+uid);
+  }
 }

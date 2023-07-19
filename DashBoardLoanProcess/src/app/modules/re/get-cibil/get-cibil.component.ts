@@ -10,19 +10,19 @@ export class GetCibilComponent {
 
   constructor(private cs:CommonService){}
 
+  x:any
   cibilscore:any
   enquiry:any;
 
   ngOnInit(): void {
 
-    this.cs.getAllEnquiryToOE().subscribe((e:any)=>{
+    this.cs.getCIBIL().subscribe((e:any)=>{
       this.enquiry=e
     })
   }
 
-  oncheckingCIBIL(eid:any)
-  {
-    this.cs.oncheckingCIBIL(eid).subscribe();
-    window.location.reload();
+  onSuccess(){
+    this.x=5;
   }
+  
 }

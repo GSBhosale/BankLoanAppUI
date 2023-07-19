@@ -35,6 +35,9 @@ const routes: Routes = [
     },
     {
       path:'Account Head' , loadChildren:()=>import('src/app/modules/ah/ah.module').then(m=>m.AhModule)
+    },
+    {
+      path:'Admin' , loadChildren:()=>import('src/app/modules/admin/admin.module').then(m=>m.AdminModule)
     }
   ]
 }
