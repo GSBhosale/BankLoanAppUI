@@ -1,4 +1,5 @@
 <div class="row"> 
+    <body>
     <div class="col-md-12 col-md-offset-3">
         <form [formGroup]="customerDetails" (ngSubmit)="submit()" id="msform">
             <!-- progressbar -->
@@ -11,18 +12,20 @@
 
             <fieldset  *ngIf="step == 1" >
                 <h2 class="fs-title">Personal Details</h2>
-                <input type="text" formControlName="firstName"  placeholder="First Name"/>
+             
+                <input type="text" formControlName="firstName"  placeholder="First Name">
                 <!-- <div *ngIf="personal_step && customerDetails.controls.name.errors">
                     <div *ngIf="personal.name.errors?.required">FirstName is required</div>
                 </div> -->
-                <input type="text" formControlName="middleName"   placeholder="Middle  Name"/>
+                <input type="text" formControlName="middleName"   placeholder="Middle  Name">
                 <!-- <div *ngIf="personal_step && customerDetails.controls.middleName.errors">
                     <div *ngIf="personal.middleName.errors?.required">MiddleName is required</div>
                 </div> -->
-                <input type="text" formControlName="lastName"  placeholder="Last Name"/>
+                <input type="text" formControlName="lastName"  placeholder="Last Name">
                 <!-- <div *ngIf="personal_step && customerDetails.controls.lastName.errors">
                   <div *ngIf="personal.lastName.errors?.required">Last is required</div> -->
                <!-- </div> -->
+            
                 <input type="number" formControlName="mobileNo"   placeholder="Contact Number"/>
                 <!-- <div *ngIf="personal_step && customerDetails.controls.mobno.errors">
                   <div *ngIf="personal.mobno.errors?.required">Contact Number is required</div>
@@ -53,14 +56,15 @@
               </div> -->
               <div formGroupName="address" >
                 <div formGroupName="localAddress" >
-                    Local Address
+                    <h2 class="fs-title">local address</h2>
+                    
                     <input type="text" formControlName="areaName"   placeholder="areaName"/>
                     <input type="text" formControlName="cityName"   placeholder="cityName"/>
                     <input type="text" formControlName="landmark"   placeholder="landmark"/>
                     <input type="number" formControlName="pincode"   placeholder="pincode"/>
                 </div>
                 <div formGroupName="permanentAddress" >
-                    Permanent Address
+                    <h2 class="fs-title">Permanent address</h2>
                     <input type="text" formControlName="areaName"   placeholder="areaName"/>
                     <input type="text" formControlName="cityName"   placeholder="cityName"/>
                     <input type="text" formControlName="landmark"   placeholder="landmark"/>
@@ -74,8 +78,8 @@
             <fieldset *ngIf="step == 2"  >
                 <div formGroupName="allPersonalDocuments">
                 <h2 class="fs-title">Personal Documents</h2>
-                
-                AddressProof <input type="file" (change)="onaddressProof($event)" />
+                <h2 class="fs-title">AddressProof</h2>
+                 <input type="file" name="adharcard" (change)="onaddressProof($event)" />
                 
                 <!-- <div *ngIf="address_step && addressDetails.controls.addressProof.errors">
                     <div *ngIf="address.addressProof.errors?.required">AddressProof is required</div>
@@ -114,7 +118,7 @@
                 <!-- <div *ngIf="address_step && addressDetails.controls.bankCheque.errors">
                     <div *ngIf="address.bankCheque.errors?.required">BankCheque is required</div>
                 </div> -->
-              
+              <br>
                 <input (click)="previous()" type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                 <input  (click)="next1()" type="button" name="next" class="next action-button" value="Next"/>
             </div>
@@ -159,4 +163,5 @@
         
 </form>
     </div>
+</body>
 </div>

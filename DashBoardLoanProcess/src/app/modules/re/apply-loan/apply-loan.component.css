@@ -6,7 +6,7 @@
 }
 
 #msform fieldset {
-    background: rgb(58, 56, 56);
+    background:rgb(37, 32, 92);
     border: 0 none;
     border-radius: 0px;
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
@@ -27,15 +27,15 @@
 
 /*inputs*/
 #msform input, #msform textarea {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 0px;
+    padding: 20px;
+    border: 1px solid #312c2c;
+    border-radius: 1px;
     margin-bottom: 10px;
-    width: 100%;
+    width: 28%;
     box-sizing: border-box;
-    font-family: montserrat;
-    color: #0a0a0a;
-    font-size: 13px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #20a93b;
+    font-size: 17px;
 }
 
 #msform input:focus, #msform textarea:focus {
@@ -53,7 +53,7 @@
 /*buttons*/
 #msform .action-button {
     width: 100px;
-    background: #da0c0c;
+    background: #bfda0c;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -91,14 +91,22 @@
     margin-bottom: 10px;
     letter-spacing: 2px;
     font-weight: bold;
-    
+    font-weight: italic;
 }
 
 .fs-subtitle {
     font-weight: normal;
     font-size: 13px;
-    color: #666;
+    color: #21a34f;
     margin-bottom: 20px;
+}
+.ff-title{
+    font-size: 8px;
+    text-transform: uppercase;
+    color: #f0f3f7;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+  
 }
 
 /*progressbar*/
@@ -210,4 +218,31 @@ fieldset {
            to {
                margin-left: 0%;width: 100%;
            }
+  }
+  body {
+    animation: 10000ms ease-in-out infinite color-change;
+  }
+  
+  @keyframes color-change {
+    0% {
+      background-color: teal;
+    }
+    20% {
+      background-color: gold;
+    }
+    40% {
+      background-color: indianred;
+    }
+    60% {
+      background-color: violet;
+    }
+    80% {
+      background-color: green;
+    }
+    100% {
+      background-color: teal;
+    }
+  }
+  .color{
+    text-decoration-color: #5d5dc5;
   }
