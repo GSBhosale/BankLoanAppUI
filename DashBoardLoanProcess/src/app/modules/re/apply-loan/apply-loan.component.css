@@ -31,7 +31,7 @@
     border: 1px solid #312c2c;
     border-radius: 1px;
     margin-bottom: 10px;
-    width: 28%;
+    width: 100%;
     box-sizing: border-box;
     font-family:Arial, Helvetica, sans-serif;
     color: #20a93b;
@@ -92,6 +92,26 @@
     letter-spacing: 2px;
     font-weight: bold;
     font-weight: italic;
+}
+.fs-titles{
+    font-size: 15px;
+   
+    color: #f0f3f7;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-weight: italic;
+
+}
+.fs-titlex{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #cf3715;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-weight: italic;
+
 }
 
 .fs-subtitle {
