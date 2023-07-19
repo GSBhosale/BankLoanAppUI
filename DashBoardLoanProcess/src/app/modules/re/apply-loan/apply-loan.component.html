@@ -14,19 +14,28 @@
             <fieldset  *ngIf="step == 1" >
                 <h2 class="fs-title">Personal Details</h2>
              
+                <div class="article-container">  
+                 <div class="article">
                 <input type="text" formControlName="firstName"  placeholder="First Name">
+                </div>
                 <!-- <div *ngIf="personal_step && customerDetails.controls.name.errors">
                     <div *ngIf="personal.name.errors?.required">FirstName is required</div>
                 </div> -->
+                <div class="article">
                 <input type="text" formControlName="middleName"   placeholder="Middle  Name">
+                </div>
                 <!-- <div *ngIf="personal_step && customerDetails.controls.middleName.errors">
                     <div *ngIf="personal.middleName.errors?.required">MiddleName is required</div>
                 </div> -->
+                <div class="article">
                 <input type="text" formControlName="lastName"  placeholder="Last Name">
+                </div>
                 <!-- <div *ngIf="personal_step && customerDetails.controls.lastName.errors">
                   <div *ngIf="personal.lastName.errors?.required">Last is required</div> -->
                <!-- </div> -->
-            
+               </div>
+
+
                 <input type="number" formControlName="mobileNo"   placeholder="Contact Number"/>
                 <!-- <div *ngIf="personal_step && customerDetails.controls.mobno.errors">
                   <div *ngIf="personal.mobno.errors?.required">Contact Number is required</div>
@@ -77,56 +86,80 @@
        
         </div>
             <fieldset *ngIf="step == 2"  >
+
                 <div formGroupName="allPersonalDocuments">
                 <h1 class="fs-titlex">Personal Documents</h1>
                <!--<h2 class="fs-title">AddressProof</h2>--> 
-               
+                </div>
+
+          <div class="article-container">
+            <div class="article">
                 <h5 class="fs-titles">Addressproof</h5>
                  <input type="file" name="adharcard" (change)="onaddressProof($event)" />
-                </div>
+             </div> 
                 <!-- <div *ngIf="address_step && addressDetails.controls.addressProof.errors">
                     <div *ngIf="address.addressProof.errors?.required">AddressProof is required</div>
                 </div> -->
+            <div class="article">  
                 <h5 class="fs-titles">PanCard</h5>
                 <input type="file"  (change)="onpanCard($event)">
+              </div>  
                 <!-- <div *ngIf="address_step && addressDetails.controls.panCard.errors">
                     <div *ngIf="address.panCard.errors?.required">PanCard is required</div>
                 </div> -->
+                <div class="article">
                 <h5 class="fs-titles">Adharcard</h5>
                 <input type="file" (change)="onadharCard($event)"/>
+                </div>
                 <!-- <div *ngIf="address_step && addressDetails.controls.adharCard.errors">
                     <div *ngIf="address.adharCard.errors?.required">AdharCard is required</div>
                 </div> -->
+                <div class="article">
                 <h5 class="fs-titles">IncomeProof</h5>
                 <input type="file" (change)="onincomeProof($event)"/>
+                </div>
                 <!-- <div *ngIf="address_step && addressDetails.controls.incomeProof.errors">
                     <div *ngIf="address.incomeProof.errors?.required">IncomeProof is required</div>
                 </div> -->
+                <div class="article">
                 <h5 class="fs-titles">BankPassbook</h5>
                 <input type="file" (change)="onbankPassbook($event)"/>
+                </div>
                 <!-- <div *ngIf="address_step && addressDetails.controls.bankPassbook.errors">
                     <div *ngIf="address.bankPassbook.errors?.required">BankPassbook is required</div>
                 </div> -->
+                <div class="article">
                 <h5 class="fs-titles">PassportPhoto</h5>
                 <input type="file" (change)="onpassportPhoto($event)"/>
+                </div>
                 <!-- <div *ngIf="address_step && addressDetails.controls.passportPhoto.errors">
                     <div *ngIf="address.passportPhoto.errors?.required">PassportPhoto is required</div>
                 </div> -->
+                <div class="article">
                 <h5 class="fs-titles">Signature</h5>
                 <input type="file" (change)="onsignature($event)"/>
+                </div>
                 <!-- <div *ngIf="address_step && addressDetails.controls.signature.errors">
                     <div *ngIf="address.signature.errors?.required">Signature is required</div>
                 </div> -->
+                <div class="article">
                 <h5 class="fs-titles">Thumb</h5>
                 <input type="file" (change)="onthumb($event)"/>
+                </div>
                 <!-- <div *ngIf="address_step && addressDetails.controls.thumb.errors">
                     <div *ngIf="address.thumb.errors?.required">Thumb is required</div>
                 </div> -->
+                <div class="article">
                 <h5 class="fs-titles">BankCheque</h5>
                 <input type="file" (change)="onbankCheque($event)"/>
+                </div>
                 <!-- <div *ngIf="address_step && addressDetails.controls.bankCheque.errors">
                     <div *ngIf="address.bankCheque.errors?.required">BankCheque is required</div>
                 </div> -->
+            
+               
+              </div>
+
               <br>
                 <input (click)="previous()" type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                 <input  (click)="next1()" type="button" name="next" class="next action-button" value="Next"/>
