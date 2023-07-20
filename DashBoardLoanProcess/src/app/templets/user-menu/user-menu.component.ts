@@ -25,7 +25,7 @@ export class UserMenuComponent implements OnInit {
 
     navigateTo(path:string)
     {
-      alert(path)
+      
         this.router.navigateByUrl('/dash/'+this.user.designation+'/'+path);
     }
 

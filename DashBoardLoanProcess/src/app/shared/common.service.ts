@@ -11,7 +11,7 @@ export class CommonService {
 
   makeEnquiry(enquiry:any)
   {
-    alert("service")
+    
     return this.http.post("http://localhost:9090/enquiry/makeEnquiry",enquiry);
   }
 
@@ -31,7 +31,7 @@ export class CommonService {
   }
 
   onForward(eid:any) {
-    alert(eid)
+   
     return this.http.get("http://localhost:9090/enquiry/forwardToOE/"+eid);
   }
 
@@ -52,7 +52,7 @@ export class CommonService {
 
   createUser(data:any)
   {
-    alert("service")
+    
     return this.http.post("http://localhost:9090/admin/createUser",data);
   }
 
@@ -93,6 +93,19 @@ export class CommonService {
   apply(eid:number)
   {
     return this.http.get("http://localhost:9090/enquiry/apply/"+eid)
+  }
+  sendRejectMail(eid:number)
+  {
+    return this.http.get("http://localhost:9090/enquiry/sendRejectMail/"+eid)
+  }
+  viewAllEnquiry()
+  {
+    return this.http.get("http://localhost:9090/admin/getAllEnquiry")
+  }
+
+  calculateEMI(calculate:any)
+  {
+    return this.http.post("http://localhost:9090/emiCalculator/emical",calculate);
 
   }
 }
