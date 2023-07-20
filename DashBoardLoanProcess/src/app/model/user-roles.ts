@@ -5,9 +5,7 @@ export class UserRoles {
             RelationshipExecutive:[
                 {path:'view_enquiry' , lable:'View Enquiry'},
                 {path:'req_cibil' , lable:'Request Cibil'},
-                {path:'apply_loan' ,lable:'Apply Loan'},
-                {path:'success_mail', lable:'Success Mail'},
-                {path:'reject_mail', lable:'Reject Mail'}
+              
             ],
 
             OperationalExecutive:[

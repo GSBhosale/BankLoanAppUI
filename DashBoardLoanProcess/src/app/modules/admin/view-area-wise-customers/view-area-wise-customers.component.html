@@ -1,7 +1,6 @@
-<p>
-    
-    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
-        aria-expanded="false" aria-controls="collapseExample">
-        Button with data-target
-    </button>
-</p>
+<div>
+    <button type="button" class="btn btn-outline-warning" (click)="search()" *ngIf="x==0">search city</button>
+<input type="text" #city (keyup.enter)="onsearch(city.value)" *ngIf="x==5">
+{{city}}
+  
+</div>

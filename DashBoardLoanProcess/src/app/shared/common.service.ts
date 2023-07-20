@@ -82,4 +82,17 @@ export class CommonService {
     alert("Re Upload")
     return this.http.put("http://localhost:9090/customer/completeUplodDocs/",customerId);
   }
+  successMail(eid:any)
+  {
+    return this.http.get("http://localhost:9090/enquiry/sendSuccessMail/"+eid)
+  }
+  rejectMail(eid:any)
+  {
+    return this.http.get("http://localhost:9090/enquiry/sendRejectMail/"+eid)
+  }
+  apply(eid:number)
+  {
+    return this.http.get("http://localhost:9090/enquiry/apply/"+eid)
+
+  }
 }

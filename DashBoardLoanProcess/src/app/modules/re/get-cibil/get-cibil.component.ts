@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { CommonService } from 'src/app/shared/common.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { CommonService } from 'src/app/shared/common.service';
 })
 export class GetCibilComponent {
 
-  constructor(private cs:CommonService){}
+  constructor(private cs:CommonService,private router:Router){}
 
   x:any
   cibilscore:any
@@ -21,8 +22,22 @@ export class GetCibilComponent {
     })
   }
 
-  onSuccess(){
+  onSuccess(eid:any){
     this.x=5;
+
+    this.cs.successMail(eid).subscribe();
+  }
+
+  onReject(eid:any){
+    
+
+    this.cs.rejectMail(eid).subscribe();
+  }
+
+  onApply(eid:number)
+  {
+    this.cs.apply(eid).subscribe();
+    this.router.navigateByUrl('/dash/RelationshipExecutive/apply_loan')
   }
   
 }
