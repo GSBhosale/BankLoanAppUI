@@ -23,5 +23,9 @@ export class ViewEnquiryComponent implements OnInit{
     this.cs.onForward(eid).subscribe();
   }  
 
+  sendRejectMail(eid:number)
+  {
+this.cs.sendRejectMail(eid).subscribe();
+  }
 
 }

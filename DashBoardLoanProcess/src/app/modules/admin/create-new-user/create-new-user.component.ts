@@ -51,7 +51,7 @@ export class CreateNewUserComponent implements OnInit{
 
     this.cs.createUser(data).subscribe();
 
-  //window.location.reload();
+  window.location.reload();
 
   }
 

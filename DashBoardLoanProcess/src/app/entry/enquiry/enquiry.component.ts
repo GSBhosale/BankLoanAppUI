@@ -27,8 +27,8 @@ export class EnquiryComponent implements OnInit{
       city:[],
       dateOfBirth:[],
       emailId:[],
-      gender:[],
-      cibilScore:[]
+      gender:[]
+     
     })
   }
 
@@ -37,6 +37,7 @@ export class EnquiryComponent implements OnInit{
    // alert("submit")
     this.cs.makeEnquiry(this.enquiryform.value).subscribe();
     console.log(this.enquiryform.value)
+    window.location.reload();
   }
 
 }
