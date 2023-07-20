@@ -93,6 +93,10 @@ export class CommonService {
   apply(eid:number)
   {
     return this.http.get("http://localhost:9090/enquiry/apply/"+eid)
+  }
 
+  calculateEMI(calculate:any)
+  {
+    return this.http.post("http://localhost:9090/emiCalculator/emical",calculate);
   }
 }

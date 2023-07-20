@@ -1,78 +1,82 @@
-<!-- <div style="background-color: #7cb6ec54;">
-    <h2 style="margin-left: 550px;">EMI Calculator</h2>
-      <div class="row" style="padding: 15px; ">
-        
-        <div class="col-md-6" style="padding-left: 50px;">
-        
-          <div class="border p-4" style="background-color: rgba(62, 174, 174, 0.329);">
-            <form (ngSubmit)="calculateEMI()" >
+<div class="container">
+
+  <div class="row" style="margin-left: 20%; margin-top: 10%;">
+
+    <div class="col-lg-8 col-lg-offset-2">
+
+
+      <form id="contact-form" [formGroup]="emiForm" >
+
+        <div class="messages"></div>
+
+        <div class="controls" style="color: azure;">
+          <div class="row" style="margin-top: 5%;">
+            <div class="col-md-4">
               <div class="form-group">
-                <label for="principalAmount">Principal Amount</label>
-                <input type="number" class="form-control" id="principalAmount" name="principalAmount" [(ngModel)]="principalAmount" required>
+                <label for="form_email">Requried Loan Amount</label>
+                <input id="form_email" type="number" class="form-control" required="required"
+                  data-error="Valid email is required." formControlName="requriedAmount">
+                <div class="help-block with-errors"></div>
               </div>
+            </div>
+            <div class="col-md-4">
               <div class="form-group">
-                <label for="interestRate">Interest Rate</label>
-                <input type="number" class="form-control" id="interestRate" name="interestRate" [(ngModel)]="interestRate" required>
+                <label for="form_phone">Rate Of Intreast</label>
+                <input id="form_phone" type="number" class="form-control" formControlName="rateOIintreast">
+                <div class="help-block with-errors"></div>
               </div>
+            </div>
+            <div class="col-md-4">
               <div class="form-group">
-                <label for="loanTenure">Loan Tenure (in months)</label>
-                <input type="number" class="form-control" id="loanTenure" name="loanTenure" [(ngModel)]="loanTenure" required>
+                <label for="phone">Tenure In Year</label>
+                <input id="phone" type="number" class="form-control" formControlName="tenour">
+                <div class="help-block with-errors"></div>
               </div>
-              <div class="form-group">
-                <label for="principalAmountSlider">Principal Amount</label>
-                <input type="range" class="form-control-range" id="principalAmountSlider" name="principalAmountSlider" min="100000" max="100000000" step="100000" [(ngModel)]="principalAmount" required>
-                <div class="d-flex justify-content-between">
-                  <span>₹100,000</span>
-                  <span>₹100,000,000</span>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="loanTenureSlider">Loan Tenure (in years)</label>
-                <input type="range" class="form-control-range" id="loanTenureSlider" name="loanTenureSlider" min="12" max="360" step="1" [(ngModel)]="loanTenure" required>
-                <div class="d-flex justify-content-between">
-                  <span>1 Year</span>
-                  <span>30 Years</span>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="interestRateSlider">Interest Rate</label>
-                <input type="range" class="form-control-range" id="interestRateSlider" name="interestRateSlider" min="1" max="30" step="0.1" [(ngModel)]="interestRate" required>
-                <div class="d-flex justify-content-between">
-                  <span>1%</span>
-                  <span>30%</span>
-                </div>
-              </div>
-              <br>
-              <button class="btn btn-primary" style="margin-left: 50px;"  (click)="calculateEMI()">Calculate EMI</button>
-              <button class="btn btn-primary" style="margin-left: 250px;" (click)="reloadcalculator()">Reload Calculate</button>
-            </form>
+            </div>
           </div>
-        </div>
-  
-        <div class="col-md-6" style="padding-right: 50px;">
-          <div class="row">
-            <div class="col-md-12">
-              <div id="chart"></div>
-        </div>
-      
-      <div class="row">
-          <div class="col-md-12" style="margin-left: 100px;">
-          <div *ngIf="showResult">
-              <br>
-            <h2>Loan Details</h2>
-            <ul class="list-group">
-              <li class="list-group-item">EMI: {{emi | currency:'INR':true}}</li>
-              <li class="list-group-item">Total Interest Payable: {{totalInterestPayable | currency:'INR':true}}</li>
-              <li class="list-group-item">Total Amount Payable: {{(emi*loanTenure) | currency:'INR':true}}</li>
-            </ul>
+          <div class="row" style="margin-top: 5%;">
+
+            <div class="col-md-12" style="margin-left: 37%;">
+
+              <button type="button" class="btn btn-primary" (click)="calculateEMI()">Calculate</button>
+            </div>
           </div>
+
         </div>
-      </div>
-      <div class="color-codes">
-        <span class="color-code" style="background-color: #7cb5ec;"></span>
-        <span class="color-code" style="background-color: #FFC0CB;"></span>
-        <span class="color-code" style="background-color: #FF0000;"></span>
-      </div>
+
+      </form>
+
     </div>
+    <div class="row" *ngIf="x==5">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Required Amount</th>
+            <th scope="col">Rate of Interest(%)</th>
+            <th scope="col">Tenure (year)</th>
+            <th scope="col">EMI(/month)</th>
+            <th scope="col">Total Interest Amount</th>
+            <th scope="col">Total Amount with Interest</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <td>{{emi.requriedAmount}}</td>
+            <td>{{emi.rateOIintreast}}</td>
+            <td>{{emi.tenour}}</td>
+            <td>{{emi.emi|number:'3.1-2'}}</td>
+            <td>{{emi.totalIntreast|number:'3.1-2'}}</td>
+            <td>{{emi.totalAmount|number:'3.1-2'}}</td>
+          </tr>
+         
+        </tbody>
+      </table>
+
+    </div>
+
   </div>
-   -->
+
+</div>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js'></script>
