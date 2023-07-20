@@ -11,11 +11,20 @@ import { CommonService } from 'src/app/shared/common.service';
 export class ViewAreaWiseCustomersComponent {
 
   city:any
+  x:any=0;
   constructor(private cs:CommonService, privaterouter:Router){}
 
   onsearch(city:any)
   {
-    alert(city);
-    //this.cs.getAreaWiseCustomer().subscribe();
+   
+     
+     this.city=city
+     //this.cs.getAreaWiseCustomer().subscribe();
+  }
+
+  search()
+  {
+    
+  this.x=5
   }
 }
