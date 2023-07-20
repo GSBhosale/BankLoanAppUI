@@ -65,4 +65,21 @@ export class CommonService {
   {
     return this.http.delete("http://localhost:9090/admin/deleteUser/"+uid);
   }
+
+  getAllCustomer()
+  {
+    return this.http.get("http://localhost:9090/customer/verifyDocuments");
+  }
+
+  verifyAllDoc(customerId:any)
+  {
+    alert("Verify")
+    return this.http.get("http://localhost:9090/customer/verifyDocs/"+customerId);
+  }
+
+  completeUplodDocs(customerId:any)
+  {
+    alert("Re Upload")
+    return this.http.put("http://localhost:9090/customer/completeUplodDocs/",customerId);
+  }
 }

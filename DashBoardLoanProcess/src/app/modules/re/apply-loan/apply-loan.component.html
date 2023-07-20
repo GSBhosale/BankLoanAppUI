@@ -3,11 +3,11 @@
     <div class="col-md-12 col-md-offset-3">
         <form [formGroup]="customerDetails" (ngSubmit)="submit()" id="msform">
             <!-- progressbar -->
-            <ul id="progressbar">
+            <!-- <ul id="progressbar">
                 <li [ngClass]="step>=1 ? 'active ' : 'inactive'">Personal Details</li>
                 <li [ngClass]="step>=2 ? 'active' : 'inactive'">Social Profiles</li>
                 <li [ngClass]="step==3 ? 'active' : 'inactive'">Account Setup</li>
-            </ul>
+            </ul> -->
             <!-- fieldsets -->
 
             <fieldset  *ngIf="step == 1" >
