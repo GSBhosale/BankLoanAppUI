@@ -34,8 +34,9 @@ export class GetCibilComponent {
     this.cs.rejectMail(eid).subscribe();
   }
 
-  onApply()
+  onApply(eid:number)
   {
+    this.cs.apply(eid).subscribe();
     this.router.navigateByUrl('/dash/RelationshipExecutive/apply_loan')
   }
   

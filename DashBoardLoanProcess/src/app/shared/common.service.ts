@@ -74,4 +74,8 @@ export class CommonService {
   {
     return this.http.get("http://localhost:9090/enquiry/sendRejectMail/"+eid)
   }
+  apply(eid:number)
+  {
+    return this.http.get("http://localhost:9090/enquiry/apply/"+eid)
+  }
 }
