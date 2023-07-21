@@ -1,0 +1,56 @@
+<div class="row"> 
+    <body>
+    
+    <div class="col-md-12 ">
+        <form [formGroup]="sactionDetails" (ngSubmit)="submit()" >
+            <!-- progressbar -->
+            <!-- <ul id="progressbar">
+                <li [ngClass]="step>=1 ? 'active ' : 'inactive'">Personal Details</li>
+                <li [ngClass]="step>=2 ? 'active' : 'inactive'">Social Profiles</li>
+                <li [ngClass]="step==3 ? 'active' : 'inactive'">Account Setup</li>
+            </ul> -->
+            <!-- fieldsets -->
+                <div>
+           
+                <h2 class="fs-title">Sanction</h2>
+             
+                <div class="article-container">  
+                 <div class="article">
+                <input type="text" formControlName="applicantName"  placeholder="Applicant Name">
+                </div>
+                <!-- <div *ngIf="personal_step && customerDetails.controls.name.errors">
+                    <div *ngIf="personal.name.errors?.required">FirstName is required</div>
+                </div> -->
+                <div class="article">
+                <input type="number" formControlName="contactDetails"   placeholder="Contact Details">
+                </div>
+                <!-- <div *ngIf="personal_step && customerDetails.controls.middleName.errors">
+                    <div *ngIf="personal.middleName.errors?.required">MiddleName is required</div>
+                </div> -->
+                <div class="article">
+                <input type="number" formControlName="loanAmountSanctioned"  placeholder="Last Name">
+                </div>
+                <!-- <div *ngIf="personal_step && customerDetails.controls.lastName.errors">
+                  <div *ngIf="personal.lastName.errors?.required">Last is required</div> -->
+               <!-- </div> -->
+               </div>
+
+               <div class="article">
+                <input type="number" formControlName="loanTenure"   placeholder="Contact Number"/>
+             </div>
+
+             <div class="article">
+                <input type="number" formControlName="rateOfInterest"   placeholder="Contact Number"/>
+              </div>
+               <input type="submit"  value="Submit">
+         
+       
+        </div>
+          
+      
+         
+         
+</form>
+    </div>
+</body>
+</div>

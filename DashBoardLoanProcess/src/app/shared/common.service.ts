@@ -108,4 +108,8 @@ export class CommonService {
     return this.http.post("http://localhost:9090/emiCalculator/emical",calculate);
 
   }
+  sanctionloan(sanction:any)
+  {
+    return this.http.post("http://localhost:9090/sanction/insertData/",sanction);
+  }
 }
