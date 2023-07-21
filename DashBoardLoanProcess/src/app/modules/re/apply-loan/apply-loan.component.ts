@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { CommonService } from 'src/app/shared/common.service';
 
 @Component({
@@ -24,9 +25,14 @@ export class ApplyLoanComponent {
   thumb:any;
   bankCheque:any;
 
+enquiry:any
+
   step = 1;
-  constructor(private formBuilder: FormBuilder,private c:CommonService) { }
+  constructor(private formBuilder: FormBuilder,private c:CommonService,private activatedroute:ActivatedRoute) { }
   ngOnInit() {
+  let e:any=sessionStorage.getItem('enquiry');
+this.enquiry=e;
+
     this.customerDetails = this.formBuilder.group({
       firstName: ['', Validators.required],
       middleName: ['', Validators.required],
@@ -76,11 +82,33 @@ export class ApplyLoanComponent {
             bankAddress : ['', Validators.required],
             bankIFSC: ['', Validators.required],
           })
+      }),
+      cibil:this.formBuilder.group({
+        cibilScore:[this.enquiry.cibilScore]
       })
 
     });
+    this.getParamData();
   }
-
+  getParamData()
+  {
+    this.activatedroute.paramMap.subscribe(param=>{
+    this.enquiry=JSON.parse(param.get('data'));
+    })
+    this.customerDetails.patchValue({
+      firstName:this.enquiry.firstName,
+      middleName:this.enquiry.middleName,
+      lastName:this.enquiry.lastName,
+      age:this.enquiry.age,
+      mobileNo:this.enquiry.mobileNo,
+      dateOfBirth:this.enquiry.dateOfBirth,
+      emailId:this.enquiry.emailId,
+      cibil:{
+        cibilScore:this.enquiry.cibilScore
+      }
+    })
+  //  alert(this.customerDetails.controls['cibil'].get('cibilScore').value);
+  }
 
 // getpersonal(){ return this.customerDetails.controls; }
 
@@ -92,7 +120,7 @@ next(){
     // this.personal_step = true;
     // if (this.customerDetails.invalid) { return }
     this.step++
-    console.log(this.customerDetails.value)
+   
   }
 }
 next1()
@@ -121,7 +149,7 @@ previous(){
 
   onaddressProof(event:any)
   {
-    console.log(event.target.files[0])
+   
       this.addressProof=event.target.files[0];
   }
   onpanCard(event:any)

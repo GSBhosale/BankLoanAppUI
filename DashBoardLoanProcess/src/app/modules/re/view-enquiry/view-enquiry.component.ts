@@ -21,11 +21,14 @@ export class ViewEnquiryComponent implements OnInit{
   onForward(eid:any)
   {
     this.cs.onForward(eid).subscribe();
+    window.location.reload();
+    window.location.reload();
   }  
 
   sendRejectMail(eid:number)
   {
 this.cs.sendRejectMail(eid).subscribe();
+window.location.reload();
   }
 
 }

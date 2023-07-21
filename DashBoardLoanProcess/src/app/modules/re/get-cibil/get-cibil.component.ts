@@ -23,7 +23,7 @@ export class GetCibilComponent {
   }
 
   onSuccess(eid:any){
-    this.x=5;
+    this.x=eid;
 
     this.cs.successMail(eid).subscribe();
   }
@@ -34,10 +34,10 @@ export class GetCibilComponent {
     this.cs.rejectMail(eid).subscribe();
   }
 
-  onApply(eid:number)
+  onApply(e:any)
   {
-    this.cs.apply(eid).subscribe();
-    this.router.navigateByUrl('/dash/RelationshipExecutive/apply_loan')
+    this.cs.apply(e.enquiryId).subscribe();
+      this.router.navigateByUrl('/dash/RelationshipExecutive/apply_loan/'+JSON.stringify(e))
   }
   
 }

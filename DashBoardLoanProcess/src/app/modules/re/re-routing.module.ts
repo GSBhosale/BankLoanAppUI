@@ -9,7 +9,7 @@ import { RejectEmailComponent } from './reject-email/reject-email.component';
 const routes: Routes = [
   {path:'view_enquiry' ,component:ViewEnquiryComponent},
 {path:'req_cibil',component:GetCibilComponent},
-{path:'apply_loan' , component:ApplyLoanComponent},
+{path:'apply_loan/:data' , component:ApplyLoanComponent},
 {path:'success_mail' , component:SuccessEmailComponent},
 {path:'reject_mail' , component:RejectEmailComponent}
 ];

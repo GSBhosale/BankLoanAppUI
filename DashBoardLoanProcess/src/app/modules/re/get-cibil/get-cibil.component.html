@@ -42,8 +42,8 @@
                     <i class="fa fa-times fa-2x" style="color: red;" aria-hidden="true" (click)="onReject(e.enquiryId)"></i>
                 </div>
             </div>
-            <div class="row mt-0 p-0" *ngIf="x==5">
-            <button type="button" class="btn btn-warning" (click)="onApply(e.enquiryId)" >APPLY</button>
+            <div class="row mt-0 p-0" *ngIf="x==e.enquiryId">
+            <button type="button" class="btn btn-warning" (click)="onApply(e)" >APPLY</button>
         </div>
         </td>
       </tr>
