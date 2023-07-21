@@ -13,10 +13,10 @@ export class UserRoles {
                 {path:'verify_doc', lable:'Document Verification'}
             ],
             CreditManager:[
-                {path:'saction_letter' , lable:'Saction Letter'}
+                {path:'saction_letter' , lable:'Sanction Letter'}
             ],
             AccountHead:[
-                {path:'disbus_loan' , lable:'Disbus Loan'},
+                {path:'disbus_loan' , lable:'Disburse Loan'},
                 {path:'view_leadger' , lable:'View Leadger'}
             ],
             Admin:[

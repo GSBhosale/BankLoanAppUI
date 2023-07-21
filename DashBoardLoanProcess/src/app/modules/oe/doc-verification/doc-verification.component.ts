@@ -12,7 +12,10 @@ export class DocVerificationComponent {
   x:any=0;
   v:any=0;
   r:any=0;
+  n:number=0;
+  g:number=0;
   customer:any
+  file:string;
   constructor(private cs:CommonService){}
   ngOnInit(): void {
     this.cs.getAllCustomer().subscribe((c:any)=>{
@@ -35,6 +38,15 @@ export class DocVerificationComponent {
   {
     this.r++
       console.log("Reject Documents "+this.r);
+  }
+
+  next()
+  {
+    this.n++
+    if(this.n==7)
+    {
+      this.g++
+    }
   }
 
   verifyAllDoc(customerId:number)

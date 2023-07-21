@@ -24,5 +24,6 @@ export class CheckCibilComponent implements OnInit{
   {
     this.cs.oncheckingCIBIL(eid).subscribe();
     window.location.reload();
+    window.location.reload();
   }
 }

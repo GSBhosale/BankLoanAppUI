@@ -30,9 +30,8 @@
         <td>{{e.panNo}}</td>
         <td>{{e.emailId}}</td>
         <td>{{e.city}}</td>
-        
         <td class="{{e.enquiryStatus}}">{{e.enquiryStatus}}</td>
-        <td><button type="button" class="btn btn-outline-info" (click)="oncheckingCIBIL(e.enquiryId)">check cibil</button>
+        <td><button type="button" class="btn btn-outline-info" *ngIf="e.cibilScore==null" (click)="oncheckingCIBIL(e.enquiryId)">check cibil</button>
         </td>
       </tr>
     </tbody>
