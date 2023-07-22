@@ -31,120 +31,168 @@
     </table>
 </div>
 <div *ngIf="x==5">
+
     <div class="col">
+        <div class="row">
+            <div class="col-8">
+                <table>
 
-        <table>
+                    <tbody style="padding-top: 35%;">
+                        <tr *ngIf="n==0">
 
-            <tbody  style="padding-top: 35%;">
-                <tr *ngIf="n==0">
-                    <td>
-                        <h4>Passport Photo</h4>
-                    </td>
-                    <td><img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.passportPhoto" class="profile"
-                            width="750" height="400" /></td>
-                    <td><button type="button" class="btn btn-success" (click)="verify()">Accept <i
-                                class="fa fa-check-square-o"></i></button></td>
-                    <td><button type="button" class="btn btn-danger" (click)="reject()">Reject <i
-                                class="fa fa-window-close-o"></i></button></td>
-                </tr>
-                <tr *ngIf="n==1">
-                    <td>
-                        <h4>Signature</h4>
-                    </td>
-                    <td><img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.signature" class="profile"
-                            width="650" height="350" /></td>
-                    <td><button type="button" class="btn btn-success" (click)="verify()">Accept <i
-                                class="fa fa-check-square-o"></i></button></td>
-                    <td><button type="button" class="btn btn-danger" (click)="reject()">Reject <i
-                                class="fa fa-window-close-o"></i></button></td>
-                </tr>
-                <tr *ngIf="n==2">
-                    <td>
-                        <h4>Thumb</h4>
-                    </td>
-                    <td>
-                        <img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.thumb" class="profile"
-                            width="650" height="350" />
-                    </td>
-                    <td><button type="button" class="btn btn-success" (click)="verify()">Accept <i
-                                class="fa fa-check-square-o"></i></button></td>
-                    <td><button type="button" class="btn btn-danger" (click)="reject()">Reject <i
-                                class="fa fa-window-close-o"></i></button></td>
-                </tr>
-                <tr *ngIf="n==3">
-                    <td>
-                        <h4>Address Proof</h4>
-                    </td>
-                    <td> <img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.addressProof" class="profile"
-                            width="650" height="350" /></td>
-                    <td><button type="button" class="btn btn-success" (click)="verify()">Accept <i
-                                class="fa fa-check-square-o"></i></button></td>
-                    <td><button type="button" class="btn btn-danger" (click)="reject()">Reject <i
-                                class="fa fa-window-close-o"></i></button></td>
-                </tr>
-                <tr *ngIf="n==4">
-                    <td>
-                        <h4>Income Proof</h4>
-                    </td>
-                    <td> <img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.incomeProof" class="profile"
-                            width="650" height="350" /></td>
-                    <td><button type="button" class="btn btn-success" (click)="verify()">Accept <i
-                                class="fa fa-check-square-o"></i></button></td>
-                    <td><button type="button" class="btn btn-danger" (click)="reject()">Reject <i
-                                class="fa fa-window-close-o"></i></button></td>
-                </tr>
-                <tr *ngIf="n==5">
-                    <td>
-                        <h4>Pan Card</h4>
-                    </td>
-                    <td> <img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.panCard" class="profile"
-                            width="650" height="350" /></td>
-                    <td><button type="button" class="btn btn-success" (click)="verify()">Accept <i
-                                class="fa fa-check-square-o"></i></button></td>
-                    <td><button type="button" class="btn btn-danger" (click)="reject()">Reject <i
-                                class="fa fa-window-close-o"></i></button></td>
-                </tr>
-                <tr *ngIf="n==6">
-                    <td>
-                        <h4>Adhar Card</h4>
-                    </td>
-                    <td> <img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.adharCard" class="profile"
-                            width="650" height="350" /></td>
-                    <td><button type="button" class="btn btn-success" (click)="verify()">Accept <i
-                                class="fa fa-check-square-o"></i></button></td>
-                    <td><button type="button" class="btn btn-danger" (click)="reject()">Reject <i
-                                class="fa fa-window-close-o"></i></button></td>
-                </tr>
-                <tr *ngIf="n==7">
-                    <td>
-                        <h4>Bank Passbook</h4>
-                    </td>
-                    <td> <img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.bankPassbook" class="profile"
-                            width="650" height="350" /></td>
-                    <td><button type="button" class="btn btn-success" (click)="verify()">Accept <i
-                                class="fa fa-check-square-o"></i></button></td>
-                    <td><button type="button" class="btn btn-danger" (click)="reject()">Reject <i
-                                class="fa fa-window-close-o"></i></button></td>
-                </tr>
-                <tr *ngIf="n==8">
-                    <td>
-                        <h4>Bank Cheque</h4>
-                    </td>
-                    <td><img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.bankCheque" class="profile"
-                            width="650" height="350" /></td>
-                    <td><button type="button" class="btn btn-success" (click)="verify()">Accept <i
-                                class="fa fa-check-square-o"></i></button></td>
-                    <td><button type="button" class="btn btn-danger" (click)="reject()">Reject <i
-                                class="fa fa-window-close-o"></i></button></td>
-                </tr>
-            </tbody>
-        </table>
+                            <h4 style="text-align: center;color:brown;padding-left: 50%;">Passport Photo
+                                <hr>
+                            </h4>
 
-        <div>
-            <button type="button" class="btn btn-success" (click)="verifyAllDoc(doc.customerId)">Verify</button>
-            <button type="button" *ngIf="g==0" class="btn btn-success" (click)="next()">NEXT</button>
+                            <div style="text-align: center; padding-left: 30%; padding-bottom: 0%;">
+                                <td><img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.passportPhoto"
+                                        class="profile" width="750" height="450" /></td>
+
+                                <div style="padding-left: 30%;"><button type="button" class="btn btn-success"
+                                        (click)="verify()">Accept <i class="fa fa-check-square-o"></i></button> &nbsp;
+                                    <button type="button" class="btn btn-danger" (click)="reject()">Reject <i
+                                            class="fa fa-window-close-o"></i></button>
+                                </div>
+                            </div>
+                        </tr>
+                        <tr *ngIf="n==1">
+                            <h4 style="text-align: center;color:brown;padding-left: 50%;">Signature
+                                <hr>
+                            </h4>
+                            <div style="text-align: center; padding-left: 30%; padding-bottom: 0%;">
+                                <td><img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.signature"
+                                        class="profile" width="650" height="350" /></td>
+                                <div style="padding-left: 30%;"><button type="button" class="btn btn-success"
+                                        (click)="verify()">Accept <i class="fa fa-check-square-o"></i></button> &nbsp;
+                                    <button type="button" class="btn btn-danger" (click)="reject()">Reject <i
+                                            class="fa fa-window-close-o"></i></button>
+                                </div>
+                            </div>
+                        </tr>
+                        <tr *ngIf="n==2">
+                            <h4 style="text-align: center;color:brown;padding-left: 50%;">Right Thumb Impression
+                                <hr>
+                            </h4>
+                            <div style="text-align: center; padding-left: 30%; padding-bottom: 0%;">
+                                <td>
+                                    <img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.thumb"
+                                        class="profile" width="650" height="350" />
+                                </td>
+                                <div style="padding-left: 30%;"><button type="button" class="btn btn-success"
+                                        (click)="verify()">Accept <i class="fa fa-check-square-o"></i></button> &nbsp;
+                                    <button type="button" class="btn btn-danger" (click)="reject()">Reject <i
+                                            class="fa fa-window-close-o"></i></button>
+                                </div>
+                            </div>
+                        </tr>
+                        <tr *ngIf="n==3">
+                            <h4 style="text-align: center;color:brown;padding-left: 50%;">Address Proof
+                                <hr>
+                            </h4>
+                            <div style="text-align: center; padding-left: 30%; padding-bottom: 0%;">
+                                <td> <img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.addressProof"
+                                        class="profile" width="650" height="350" /></td>
+                                <div style="padding-left: 30%;"><button type="button" class="btn btn-success"
+                                        (click)="verify()">Accept <i class="fa fa-check-square-o"></i></button> &nbsp;
+                                    <button type="button" class="btn btn-danger" (click)="reject()">Reject <i
+                                            class="fa fa-window-close-o"></i></button>
+                                </div>
+                            </div>
+                        </tr>
+                        <tr *ngIf="n==4">
+                            <h4 style="text-align: center;color:brown;padding-left: 50%;">Income Proof
+                                <hr>
+                            </h4>
+                            <div style="text-align: center; padding-left: 30%; padding-bottom: 0%;">
+                                <td> <img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.incomeProof"
+                                        class="profile" width="650" height="350" /></td>
+                                <div style="padding-left: 30%;"><button type="button" class="btn btn-success"
+                                        (click)="verify()">Accept <i class="fa fa-check-square-o"></i></button> &nbsp;
+                                    <button type="button" class="btn btn-danger" (click)="reject()">Reject <i
+                                            class="fa fa-window-close-o"></i></button>
+                                </div>
+                            </div>
+                        </tr>
+                        <tr *ngIf="n==5">
+                            <h4 style="text-align: center;color:brown;padding-left: 50%;">PanCard
+                                <hr>
+                            </h4>
+                            <div style="text-align: center; padding-left: 30%; padding-bottom: 0%;">
+                                <td> <img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.panCard"
+                                        class="profile" width="650" height="350" /></td>
+                                <div style="padding-left: 30%;"><button type="button" class="btn btn-success"
+                                        (click)="verify()">Accept <i class="fa fa-check-square-o"></i></button> &nbsp;
+                                    <button type="button" class="btn btn-danger" (click)="reject()">Reject <i
+                                            class="fa fa-window-close-o"></i></button>
+                                </div>
+                            </div>
+                        </tr>
+                        <tr *ngIf="n==6">
+                            <h4 style="text-align: center;color:brown;padding-left: 50%;">AdharCard
+                                <hr>
+                            </h4>
+                            <div style="text-align: center; padding-left: 30%; padding-bottom: 0%;">
+                                <td> <img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.adharCard"
+                                        class="profile" width="650" height="350" /></td>
+                                <div style="padding-left: 30%;"><button type="button" class="btn btn-success"
+                                        (click)="verify()">Accept <i class="fa fa-check-square-o"></i></button> &nbsp;
+                                    <button type="button" class="btn btn-danger" (click)="reject()">Reject <i
+                                            class="fa fa-window-close-o"></i></button>
+                                </div>
+                            </div>
+                        </tr>
+                        <tr *ngIf="n==7">
+                            <h4 style="text-align: center;color:brown;padding-left: 50%;">BankPassbook
+                                <hr>
+                            </h4>
+                            <div style="text-align: center; padding-left: 30%; padding-bottom: 0%;">
+
+                                <td> <img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.bankPassbook"
+                                        class="profile" width="650" height="350" /></td>
+                                <div style="padding-left: 30%;"><button type="button" class="btn btn-success"
+                                        (click)="verify()">Accept <i class="fa fa-check-square-o"></i></button> &nbsp;
+                                    <button type="button" class="btn btn-danger" (click)="reject()">Reject <i
+                                            class="fa fa-window-close-o"></i></button>
+                                </div>
+                            </div>
+                        </tr>
+                        <tr *ngIf="n==8">
+                            <h4 style="text-align: center;color:brown;padding-left: 50%;">CheckBook
+                                <hr>
+                            </h4>
+                            <div style="text-align: center; padding-left: 30%; padding-bottom: 0%;">
+                                <td><img [src]="'data:image/jpeg;base64,'+ doc.allPersonalDocuments.bankCheque"
+                                        class="profile" width="650" height="350" /></td>
+                                <div style="padding-left: 30%;"><button type="button" class="btn btn-success"
+                                        (click)="verify()">Accept <i class="fa fa-check-square-o"></i></button> &nbsp;
+                                    <button type="button" class="btn btn-danger" (click)="reject()">Reject <i
+                                            class="fa fa-window-close-o"></i></button>
+                                </div>
+                            </div>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4 ">
+                <div style="padding-left: 60%;">
+                    <pre>
+
+        </pre>
+                    <pre>
+
+
+        </pre>
+                    <pre>
+
+        </pre>
+                    <button type="button" class="btn btn-success" (click)="verifyAllDoc(doc.customerId)">Verify</button>
+                    <pre></pre>
+                    <pre></pre>
+                    <button type="button" *ngIf="g==0" class="btn btn-warning" (click)="next()">NEXT</button>
+                </div>
+            </div>
 
         </div>
-
     </div>
-</div>
