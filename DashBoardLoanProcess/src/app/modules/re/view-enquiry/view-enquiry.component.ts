@@ -30,5 +30,10 @@ export class ViewEnquiryComponent implements OnInit{
 this.cs.sendRejectMail(eid).subscribe();
 window.location.reload();
   }
+  mouseOver(e:any)
+  {
+  console.log(e)
+    //this.selected=e.firstName
+  }
 
 }
