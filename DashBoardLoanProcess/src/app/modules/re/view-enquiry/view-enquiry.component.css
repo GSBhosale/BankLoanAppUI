@@ -36,3 +36,7 @@ th{
     position: sticky;
     background: white;
  }
+ .highlights{
+    background: green;
+    color: white;
+ }

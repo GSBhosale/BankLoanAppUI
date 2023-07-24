@@ -18,7 +18,9 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let e of enquiry">
+        <tr *ngFor="let e of enquiry" (mouseover)="mouseOver(e)" [ngClass]="{
+            'highlights':selected===e.lastName
+        }">
             <td>{{e.enquiryId}}</td>
             <td>{{e.enquiryDate|date:'d/MM/yyyy'}}</td>
             <td class="name">{{e.firstName}}</td>

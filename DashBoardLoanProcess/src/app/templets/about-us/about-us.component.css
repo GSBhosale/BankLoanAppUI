@@ -24,4 +24,7 @@
 color: brown;
     font-size: xx-large;
   }
- 
+  #vikasimg{
+    border:1px solid rgb(32, 32, 143) ;
+    border-radius: 50%;
+  }
