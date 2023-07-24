@@ -16,11 +16,11 @@
     <tbody>
         <tr *ngFor="let u of user">
             <td>{{u.userId}}</td>
-            <td>{{u.firstName}}</td>
-            <td>{{u.lastName}}</td>
+            <td class="name">{{u.firstName}}</td>
+            <td class="name">{{u.lastName}}</td>
             <td>{{u.mobileNumber}}</td>
             <td>{{u.emailId}}</td>
-            <td>{{u.designation}}</td>
+            <td class="designation">{{u.designation}}</td>
             <td>{{u.salary}}</td>
             <td><img [src]="'data:image/jpeg;base64,'+ u.userDocs.photo" class="profile"
                      width="100" height="100" /></td>

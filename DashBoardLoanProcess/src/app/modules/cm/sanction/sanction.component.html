@@ -1,56 +1,146 @@
-<div class="row"> 
-    <body>
-    
-    <div class="col-md-12 ">
-        <form [formGroup]="sactionDetails" (ngSubmit)="submit()" >
-            <!-- progressbar -->
-            <!-- <ul id="progressbar">
-                <li [ngClass]="step>=1 ? 'active ' : 'inactive'">Personal Details</li>
-                <li [ngClass]="step>=2 ? 'active' : 'inactive'">Social Profiles</li>
-                <li [ngClass]="step==3 ? 'active' : 'inactive'">Account Setup</li>
-            </ul> -->
-            <!-- fieldsets -->
-                <div>
-           
-                <h2 class="fs-title">Sanction</h2>
-             
-                <div class="article-container">  
-                 <div class="article">
-                <input type="text" formControlName="applicantName"  placeholder="Applicant Name">
-                </div>
-                <!-- <div *ngIf="personal_step && customerDetails.controls.name.errors">
-                    <div *ngIf="personal.name.errors?.required">FirstName is required</div>
-                </div> -->
-                <div class="article">
-                <input type="number" formControlName="contactDetails"   placeholder="Contact Details">
-                </div>
-                <!-- <div *ngIf="personal_step && customerDetails.controls.middleName.errors">
-                    <div *ngIf="personal.middleName.errors?.required">MiddleName is required</div>
-                </div> -->
-                <div class="article">
-                <input type="number" formControlName="loanAmountSanctioned"  placeholder="Last Name">
-                </div>
-                <!-- <div *ngIf="personal_step && customerDetails.controls.lastName.errors">
-                  <div *ngIf="personal.lastName.errors?.required">Last is required</div> -->
-               <!-- </div> -->
-               </div>
+<div *ngIf="x==0">
+    <table class="table">
+        <thead class="thead">
+            <tr>
+                <th scope="col">Cust.Id</th>
+                <th scope="col">Photo</th>
+                <th scope="col">Name</th>
+                <th scope="col">Mobile No</th>
+                <th scope="col">Pan No</th>
+                <th scope="col">Req. loan</th>
+                <th scope="col">Tenure</th>
+                <th scope="col">cibil Score</th>
+                <th scope="col">cibil Status</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of sanction">
+                <td>{{c.customerId}}</td>
+                <td style="margin-left: -10%;"><img
+                        [src]="'data:image/jpeg;base64,'+ c.allPersonalDocuments.passportPhoto" class="profile"
+                        width="100" height="100" /></td>
+                <td>{{c.firstName}}&nbsp;{{c.lastName}}</td>
+                <td>{{c.mobileNo}}</td>
+                <td>{{c.panNo}}</td>
+                <td>{{c.accountDetails.requiredLoanAmount}}</td>
+                <td>{{c.accountDetails.tenureInYear}}</td>
+                <td id="cibilScore">{{c.cibil.cibilScore}}</td>
+                <td class="{{c.cibil.cibilStatus}}">{{c.cibil.cibilStatus}}</td>
+                <td>
+                    <button type="button" class="btn btn-success"  (click)="popUp(c)" >Sanction</button>
+                  
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div *ngIf="x==2">
 
-               <div class="article">
-                <input type="number" formControlName="loanTenure"   placeholder="Contact Number"/>
-             </div>
 
-             <div class="article">
-                <input type="number" formControlName="rateOfInterest"   placeholder="Contact Number"/>
-              </div>
-               <input type="submit"  value="Submit">
-         
-       
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+            <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                <div class="card-body p-4 p-md-5">
+                    <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Santion Loan</h3>
+                    <form [formGroup]="sactionDetails" (ngSubmit)="submit()">
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+
+                                <img [src]="'data:image/jpeg;base64,'+ customer.allPersonalDocuments.passportPhoto"
+                                    class="profile" width="100" height="100" />
+
+                            </div>
+                            <div class="col-md-6 mb-4">
+
+                                <div class="form-outline">
+                                    <input type="text" id="lastName" class="form-control form-control-lg"
+                                        formControlName="applicantName" />
+                                    <label class="form-label" for="lastName">Name</label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4 d-flex align-items-center">
+                                <div class="row">
+                                    <h5>Proposed Loan Amount:</h5><br>
+                                    <h5>{{customer.accountDetails.requiredLoanAmount}}</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4 d-flex align-items-center">
+                                <div class="row">
+                                    <h5>Proposed Loan Tenure:</h5><br>
+                                    <h5>{{customer.accountDetails.tenureInYear}}</h5>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline">
+                                    <input type="numner" id="lastName" class="form-control form-control-lg"
+                                        formControlName="loanAmountSanctioned" />
+                                    <label class="form-label" for="lastName">Loan Amount Sanctioned</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-3 mb-4 pb-2">
+                                <div class="form-outline">
+                                    <input type="number" id="lastName" class="form-control form-control-lg"
+                                        formControlName="loanTenure" />
+                                    <label class="form-label" for="lastName">Tenure in Years</label>
+                                </div>
+
+                            </div>
+                            <div class="col-md-3 mb-4 pb-2">
+
+                                <div class="form-outline">
+                                    <input type="number" id="lastName" class="form-control form-control-lg"
+                                        formControlName="rateOfInterest" />
+                                    <label class="form-label" for="lastName">Rate of Interest</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" *ngIf="y==2">
+                            <div class="col-12">
+
+                               
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Total Interest Amount</th>
+                                        <th scope="col">Monthly EMI</th>
+                                        <th scope="col">Total Amount</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>{{customer.sanctionLetter.totalInterestAmount}}</td>
+                                        <td>{{customer.sanctionLetter.monthlyEmiAmount}}</td>
+                                        <td>{{customer.sanctionLetter.totalLoanAmountWithInterest}}</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 pt-2">
+                            <input class="btn btn-primary btn-lg" type="submit" value="Sanction" />
+                            <input class="btn btn-primary btn-lg" type="button" (click)="onClose()" value="close" />
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
         </div>
-          
-      
-         
-         
-</form>
     </div>
-</body>
+
+
 </div>

@@ -108,8 +108,24 @@ export class CommonService {
     return this.http.post("http://localhost:9090/emiCalculator/emical",calculate);
 
   }
-  sanctionloan(sanction:any)
+  sanctionloan(sanction:any,cid:any)
   {
-    return this.http.post("http://localhost:9090/sanction/insertData/",sanction);
+    return this.http.post("http://localhost:9090/sanction/sanctionLoan/"+cid,sanction);
+  }
+
+  getSanction()
+  {
+    return this.http.get("http://localhost:9090/sanction/getSanction");
+  }
+  sendPdf(cid:any)
+  {
+    return this.http.get("http://localhost:9090/sanction/mailPdf/"+cid);
+
+  }
+
+  getForDisbursement()
+  {
+    return this.http.get("http://localhost:9090/disbursement/loanDisbursement");
+
   }
 }

@@ -40,6 +40,7 @@ this.enquiry=e;
       mobileNo: ['', Validators.required],
       dateOfBirth: ['', Validators.required],
       gender: ['', Validators.required],
+      panNo:['',Validators.required],
       age: ['', Validators.required],
       emailId: ['', Validators.required],
       education: ['', Validators.required],
@@ -84,7 +85,7 @@ this.enquiry=e;
           })
       }),
       cibil:this.formBuilder.group({
-        cibilScore:[this.enquiry.cibilScore]
+        cibilScore:[]
       })
 
     });
@@ -103,6 +104,7 @@ this.enquiry=e;
       mobileNo:this.enquiry.mobileNo,
       dateOfBirth:this.enquiry.dateOfBirth,
       emailId:this.enquiry.emailId,
+      panNo:this.enquiry.panNo,
       cibil:{
         cibilScore:this.enquiry.cibilScore
       }

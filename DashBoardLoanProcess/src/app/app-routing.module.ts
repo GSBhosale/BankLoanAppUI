@@ -31,10 +31,10 @@ const routes: Routes = [
       path:'OperationalExecutive' , loadChildren:()=>import('src/app/modules/oe/oe.module').then(m=>m.OeModule)
     },
     {
-      path:'Credit Manager' ,loadChildren:()=>import('src/app/modules/cm/cm.module').then(m=>m.CmModule)
+      path:'CreditManager' ,loadChildren:()=>import('src/app/modules/cm/cm.module').then(m=>m.CmModule)
     },
     {
-      path:'Account Head' , loadChildren:()=>import('src/app/modules/ah/ah.module').then(m=>m.AhModule)
+      path:'AccountHead' , loadChildren:()=>import('src/app/modules/ah/ah.module').then(m=>m.AhModule)
     },
     {
       path:'Admin' , loadChildren:()=>import('src/app/modules/admin/admin.module').then(m=>m.AdminModule)

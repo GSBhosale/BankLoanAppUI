@@ -3,6 +3,6 @@
     color: white;
 }
 .view{
-    max-height: 570px;
+    max-height: 700px;
     overflow-y: scroll;
 }
