@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonService } from 'src/app/shared/common.service';
+import Swal from 'sweetalert2'
+
 
 @Component({
   selector: 'app-login',
@@ -28,11 +30,28 @@ user:any
       console.log(responce)
       if(responce!=null)
       {
+
+        Swal.fire({
+          position: 'top',
+          icon: 'success',
+          title: 'Log in Successfull ...',
+          showConfirmButton: false,
+          timer: 2000
+        })
         sessionStorage.setItem("authUser",JSON.stringify(responce));
         this.router.navigateByUrl('/dash/'+responce.designation)
       }
       else{
-        alert("enter valid credentials..!")
+        Swal.fire({
+          position: 'top',
+          icon: 'error',
+          title: 'Ohhh...',
+          text:'enter valid credentials..! or register First'
+          
+         
+        })
+        
+      
       }
     })
   }
