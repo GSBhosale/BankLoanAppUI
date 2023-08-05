@@ -1,0 +1,75 @@
+<div class="row justify-content-center align-items-center h-100">
+    <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+                
+                
+
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+
+                            <img [src]="'data:image/jpeg;base64,'+ cust.userDocs.photo" class="profile" width="100"
+                                height="100" />
+
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            
+                            <div class="row">
+                                <h5>Account holder's name:</h5><br>
+                                <h5>{{customer.accountDetails.accoubntHoldersName}}</h5>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+                            <div class="row">
+                                <h5>Total Loan Amount:</h5><br>
+                                <h5>{{customer.sanctionLetter.totalInterestAmount+customer.sanctionLetter.loanAmountSanctioned+customer.sanctionLetter.processingFees|number:'3.1-2'}}</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+                            <div class="row">
+                                <h5>Sanction Loan Amount:</h5><br>
+                                <h5>{{customer.sanctionLetter.loanAmountSanctioned|number:'3.1-2'}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+                            <div class="row">
+                                <h5>Remaining Amount:</h5><br>
+                                <h5>{{customer.sanctionLetter.totalLoanAmountWithInterest|number:'3.1-2'}}</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4 d-flex align-items-center">
+                            <div class="row">
+                                <h5>Total Interest Amount+Proccessing fees.:</h5><br>
+                                <h5>{{customer.sanctionLetter.totalInterestAmount+customer.sanctionLetter.processingFees|number:'3.1-2'}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+
+                        <div class="col-md-6 mb-4 pb-2">
+
+                            <div class="row">
+                                <h5>No of Paid EMI:</h5><br>
+                                <h5>{{customer.ledger.noOfEmiPaid}}</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4 pb-2">
+
+                            <div class="row">
+                                <h5>No of Unpaid EMI:</h5><br>
+                                <h5>{{customer.ledger.noOfEmiUnpaid}}</h5>
+                            </div>
+                        </div>
+                    </div>
+              
+            </div>
+        </div>
+    </div>
+</div>

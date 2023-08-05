@@ -26,8 +26,7 @@ user:any
   authUser()
   {
     this.cs.authUser(this.loginform.controls['username'].value,this.loginform.controls['password'].value).subscribe((responce:any)=>{
-
-      console.log(responce)
+      
       if(responce!=null)
       {
 
@@ -54,6 +53,9 @@ user:any
       
       }
     })
+
+    
+
   }
 
   onlogin()

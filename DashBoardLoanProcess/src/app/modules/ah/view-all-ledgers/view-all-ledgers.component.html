@@ -1,0 +1,36 @@
+<table class="table">
+    <thead class="thead">
+        <tr>
+            <th scope="col">Cust.Id</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Name</th>
+            <th scope="col">Mobile No</th>
+            <th scope="col">Total Loan Amount </th>
+            <th scope="col">No Of paid emi</th>
+            <th scope="col">no of Unpaid emi</th>
+            <th scope="col">Emi(monthly)</th>
+            <th scope="col">Reamaining Amount</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of customer">
+            <td>{{c.customerId}}</td>
+            <td style="margin-left: -10%;"><img
+                    [src]="'data:image/jpeg;base64,'+ c.userDocs.photo" class="profile"
+                    width="100" height="100" /></td>
+            <td>{{c.firstName}}&nbsp;{{c.lastName}}</td>
+            <td>{{c.mobileNo}}</td>
+            <td>{{c.sanctionLetter.totalInterestAmount+c.sanctionLetter.loanAmountSanctioned+c.sanctionLetter.processingFees|number:'3.1-2'}}</td>
+            <td>{{c.ledger.noOfEmiPaid}}</td>
+            <td>{{c.ledger.noOfEmiUnpaid}}</td>
+            <td>{{c.sanctionLetter.monthlyEmiAmount|number:'3.1-2'}}</td>
+            <td>{{c.sanctionLetter.totalLoanAmountWithInterest|number:'3.1-2'}}</td>
+            
+            <td>
+                <button type="button" class="btn btn-success" mat-button (click)="openPopupForm(c)" >EMIs</button>
+              
+            </td>
+        </tr>
+    </tbody>
+</table>

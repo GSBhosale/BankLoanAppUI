@@ -12,19 +12,24 @@ export class ViewAreaWiseCustomersComponent {
 
   city:any
   x:any=0;
+
+  customer:any
   constructor(private cs:CommonService, privaterouter:Router){}
 
   onsearch(city:any)
   {
-   
-     
      this.city=city
      //this.cs.getAreaWiseCustomer().subscribe();
-  }
+     this.cs.getAllCustomers().subscribe((c:any)=>{
+      this.customer=c;
+  })}
 
   search()
   {
-    
   this.x=5
   }
+
+  
+
+
 }

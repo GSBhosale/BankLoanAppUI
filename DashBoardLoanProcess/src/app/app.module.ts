@@ -18,6 +18,7 @@ import { DashheaderComponent } from './templets/dashheader/dashheader.component'
 import { UserMenuComponent } from './templets/user-menu/user-menu.component';
 import { FooterComponent } from './templets/footer/footer.component';
 import { EMICalculatorComponent } from './templets/emicalculator/emicalculator.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,7 @@ import { EMICalculatorComponent } from './templets/emicalculator/emicalculator.c
 
   imports: [
     BrowserModule,
-    AppRoutingModule,ReactiveFormsModule,RouterModule,HttpClientModule
+    AppRoutingModule,ReactiveFormsModule,RouterModule,HttpClientModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

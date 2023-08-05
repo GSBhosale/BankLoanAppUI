@@ -25,6 +25,10 @@ export class UserRoles {
                 {path:'allproposals' ,lable:'View All Proposals'},
                 {path:'allenquiry' , lable:'Enquiry History'},
                 {path:'areacustomer' ,lable:'Area Wise Customer'},
+            ],
+            Customer:[
+                {path:'pay_emi' , lable:'Pay EMI'},
+                {path:'see_Account' , lable:'My Account'}
             ]
         }
     ]

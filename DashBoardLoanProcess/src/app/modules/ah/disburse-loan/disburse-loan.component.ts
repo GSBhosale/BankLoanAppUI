@@ -50,6 +50,13 @@ constructor(private cs:CommonService,private router:Router,private fb:FormBuilde
 
   submit()
   {
+this.cs.disburseLoan(this.disburseForm.value,this.cust.customerId).subscribe();
+this.cs.sendDisbursementLetter(this.cust.customerId).subscribe();
+this.cs.createLedger(this.cust.customerId).subscribe();
+  }
 
+  onClose()
+  {
+    this.x=0;
   }
 }

@@ -1,6 +1,38 @@
-<div>
+<div >
     <button type="button" class="btn btn-outline-warning" (click)="search()" *ngIf="x==0">search city</button>
 <input type="text" #city (keyup.enter)="onsearch(city.value)" *ngIf="x==5">
 {{city}}
   
+</div>
+<div *ngIf="x==5">
+<p>view-all-proposals works!</p>
+<table class="table">
+    <thead class="thead">
+        <tr>
+            <th scope="col">Customer Id</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Name</th>
+            <th scope="col">Mobile No</th>
+            <th scope="col">Pan No</th>
+            
+            <th scope="col">Loan Sanctioned</th>
+            <th scope="col">Reamaining Amount</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of customer">
+            <td>{{c.customerId}}</td>
+            <td><img [src]="'data:image/jpeg;base64,'+ c.userDocs.photo" class="profile"
+                width="100" height="100" /></td>
+            <td>{{c.firstName}}&nbsp;{{c.lastName}}</td>
+            <td>{{c.mobileNo}}</td>
+            <td>{{c.panNo}}</td>
+            
+            <td>{{c.sanctionLetter.loanAmountSanctioned+c.sanctionLetter.processingFees|number:'3.1-2'}}</td>
+            <td>{{c.sanctionLetter.totalLoanAmountWithInterest|number:'3.1-2'}}</td>
+            <td>{{c.applicationStatus}}</td>
+        </tr>
+    </tbody>
+</table>
 </div>

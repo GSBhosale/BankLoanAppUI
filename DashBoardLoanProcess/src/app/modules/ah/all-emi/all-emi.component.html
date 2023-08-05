@@ -1,0 +1,17 @@
+<table class="table">
+    <thead class="thead">
+        <tr>
+            <th scope="col">Emi Id</th>
+            <th scope="col">Emi Status</th>
+            <th scope="col">Remaining Amount</th> 
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of allEmi">
+            <td>{{e.emiId}}</td>
+            <td class="{{e.emiStatus}}">{{e.emiStatus}}</td>
+            <td>{{e.remainingAmount|number:'3.1-2'}}</td>    
+        </tr>
+    </tbody>
+</table>

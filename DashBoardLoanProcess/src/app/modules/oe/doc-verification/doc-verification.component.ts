@@ -51,7 +51,7 @@ export class DocVerificationComponent {
 
   verifyAllDoc(customerId:number)
   {
-    if(this.v==9)
+    if(this.v==8)
     {
       this.cs.verifyAllDoc(customerId).subscribe();
     }

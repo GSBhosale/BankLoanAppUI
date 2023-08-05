@@ -1,0 +1,21 @@
+<table class="table">
+    <thead class="thead">
+        <tr>
+            <th scope="col">Emi Id</th>
+            <th scope="col">Emi Status</th>
+            <th scope="col">Remaining Amount</th>
+            <th scope="col">Action</th> 
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of allEmi">
+            <td>{{e.emiId}}</td>
+            <td class="{{e.emiStatus}}">{{e.emiStatus}}</td>
+            <td>{{e.remainingAmount|number:'3.1-2'}}</td>  
+            <td >
+                <button  [disabled]="e.emiStatus=='PAID'"><i class="fa fa-credit-card-alt fa-2x"  (click)="payEMI(e.emiId)" aria-hidden="true"></i></button>
+            </td>  
+        </tr>
+    </tbody>
+</table>

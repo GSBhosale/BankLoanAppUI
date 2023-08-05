@@ -110,7 +110,7 @@ export class CommonService {
   }
   sanctionloan(sanction:any,cid:any)
   {
-    return this.http.post("http://localhost:9090/sanction/sanctionLoan/"+cid,sanction);
+    return this.http.put("http://localhost:9090/sanction/sanctionLoan/"+cid,sanction);
   }
 
   getSanction()
@@ -126,6 +126,56 @@ export class CommonService {
   getForDisbursement()
   {
     return this.http.get("http://localhost:9090/disbursement/loanDisbursement");
+  }
 
+  disburseLoan(dl:any,cid:number)
+  {
+    return this.http.post('http://localhost:9090/disbursement/createLoanDisbursement/'+cid,dl);
+  }
+
+  sendDisbursementLetter(cid:any)
+  {
+    
+    return this.http.get("http://localhost:9090/disbursement/mailPdf/"+cid);
+  }
+
+  createLedger(cid:any)
+  {
+    return this.http.get("http://localhost:9090/ledger/createEMI/"+cid);
+  }
+
+  getAllLedger()
+  {
+    return this.http.get("http://localhost:9090/ledger/getAllLedgers");
+  }
+
+  authCustomer(username:any,password:any)
+  {
+    return this.http.get("http://localhost:9090/customer/authCustomer/"+username+"/"+password);
+  }
+
+  payEMI(emiId:any,cid:any)
+  {
+    return this.http.get("http://localhost:9090/emi/payEmi/"+emiId+"/"+cid);
+  }
+
+  getAllEmi(cid:any)
+  {
+    return this.http.get("http://localhost:9090/emi/getAllEmi/"+cid);
+  }
+
+  getSingleCustomer(cid:any)
+  {
+    return this.http.get("http://localhost:9090/customer/getSingleCustomer/"+cid);
+  }
+
+  getAllCustomers()
+  {
+    return this.http.get("http://localhost:9090/customer/getAllCustomers");
+  }
+
+  getAreaWise(city:any)
+  {
+    return this.http.get("http://localhost:9090/customer/areaWiseCustomers/"+city);
   }
 }

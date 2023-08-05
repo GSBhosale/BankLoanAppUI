@@ -20,7 +20,7 @@ export class ApplyLoanComponent {
   adharCard:any;
   incomeProof:any;
   bankPassbook:any;
-  passportPhoto:any;
+  photo:any;
   signature:any;
   thumb:any;
   bankCheque:any;
@@ -172,7 +172,7 @@ previous(){
   }
   onpassportPhoto(event:any)
   {
-      this.passportPhoto=event.target.files[0];
+      this.photo=event.target.files[0];
   }
   onsignature(event:any)
   {
@@ -197,7 +197,7 @@ previous(){
     data.append("adharCard",this.adharCard);
     data.append("incomeProof",this.incomeProof);
     data.append("bankPassbook",this.bankPassbook);
-    data.append("passportPhoto",this.passportPhoto);
+    data.append("passportPhoto",this.photo);
     data.append("signature",this.signature);
     data.append("thumb",this.thumb);
     data.append("bankCheque",this.bankCheque);

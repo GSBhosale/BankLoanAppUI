@@ -38,6 +38,9 @@ const routes: Routes = [
     },
     {
       path:'Admin' , loadChildren:()=>import('src/app/modules/admin/admin.module').then(m=>m.AdminModule)
+    },
+    {
+      path:'Customer' , loadChildren:()=>import('src/app/modules/user/user.module').then(m=>m.UserModule)
     }
   ]
 }
